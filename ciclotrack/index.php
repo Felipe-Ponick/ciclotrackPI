@@ -41,7 +41,7 @@ include "layout/header/header.php";
 
         <div class="gradeInicio">
           <div class="gradeFoto">
-              <img src=".assets/img/bike01.png" alt="Foto 1">
+              <img src="assets/img/bike01.png" alt="Foto 1">
               <div class="legenda">Legenda 1</div>
           </div>
           <div class="gradeFoto">

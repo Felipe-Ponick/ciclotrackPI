@@ -13,21 +13,21 @@
             <a target="_blank" rel="noreferrer" href="https://www.instagram.com/maduxstt/">
               <img
                 class="main-footer__icon"
-                src="./assets/img/png/insta-ico.png"
+                src="./assets/img/insta-ico.png"
                 alt="icon"
               />
             </a>
             <a target="_blank" rel="noreferrer" href="https://www.instagram.com/biel_dripi/">
               <img
                 class="main-footer__icon"
-                src="./assets/img/png/insta-ico.png"
+                src="./assets/img/insta-ico.png"
                 alt="icon"
               />
             </a> 
             <a target="_blank" rel="noreferrer" href="https://www.instagram.com/miguelz.lima/">
               <img
                 class="main-footer__icon "
-                src="./assets/img/png/insta-ico.png"
+                src="./assets/img/insta-ico.png"
                 alt="icon"
               />
             </a>
@@ -35,7 +35,7 @@
             <a target="_blank" rel="noreferrer" href="https://www.instagram.com/p/C0o4rY5uvyN/">
               <img
                 class="main-footer__icon"
-                src="./assets/img/png/insta-ico.png"
+                src="./assets/img/insta-ico.png"
                 alt="icon"
               />
             </a>

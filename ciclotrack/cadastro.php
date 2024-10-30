@@ -1,6 +1,7 @@
 <?php
 include "../include/MySql.php"; // Certifique-se de que este arquivo contém a conexão correta com o banco de dados.
 
+
 $nmUsuario = $email = $genero = $senha = $dtNasc = $confSenha = "";
 $nmUsuarioErro = $emailErro = $generoErro = $senhaErro = $dtNascErro = $confSenhaErro = $msgErro = "";
 
@@ -148,5 +149,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </section>
     <script src="assets/js/index.js"></script>
 </body>
-
+<?php 
+include "layout/footer/footer.php";
+?>
 </html>

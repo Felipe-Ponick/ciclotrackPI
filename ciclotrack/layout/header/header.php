@@ -34,6 +34,7 @@ if (session_status() === PHP_SESSION_NONE) {
             echo '<div class="dropdown">';
             echo '<a href="#" class="header__link dropdown-toggle" onclick="toggleDropdown()">Olá, ' . htmlspecialchars($_SESSION['nmUsuario']) . '</a>';
             echo '<div class="dropdown-menu" id="dropdownMenu">';
+            //Mudar o botao
             echo '<a href="logout.php" class="dropdown-item">Sair</a>';
             echo '</div></div>';
           } else {

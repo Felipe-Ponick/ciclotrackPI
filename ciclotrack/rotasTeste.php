@@ -1,5 +1,12 @@
 <?php
 include "layout/header/header.php";
+
+if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
+    // Redireciona para a página de login
+    header("Location: login.php");
+    exit;
+}
+
 ?>
 
 <!DOCTYPE html>
