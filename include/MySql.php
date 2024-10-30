@@ -2,7 +2,7 @@
 // Conexão com o banco de dados
 $servername = "localhost";
 $username = "root"; 
-$password = ""; // Defina a senha do seu banco de dados, se existir
+$password = "123"; // Defina a senha do seu banco de dados, se existir
 $dbname = "zaily";
  
 // Criando a conexão
