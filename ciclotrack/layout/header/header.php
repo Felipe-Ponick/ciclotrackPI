@@ -21,7 +21,7 @@ if (session_status() === PHP_SESSION_NONE) {
             <a href="rotasTeste.php" class="header__link"> Rotas </a>
           </li>
           <li class="header__link-wrapper">
-            <a href="oficinas.php" class="header__link"> Oficinas </a>
+            <a href="oficinas.php" class="header__link"> ODS </a>
           </li>
         <?php 
         endif;
@@ -49,6 +49,11 @@ if (session_status() === PHP_SESSION_NONE) {
           src="./assets/img/svg/ham-menu.svg"
           alt="hamburger menu"
           class="header__main-ham-menu" />
+          <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
       </div>
     </div>
   </div>
@@ -62,7 +67,7 @@ if (session_status() === PHP_SESSION_NONE) {
           <a href="rotasTeste.php"> Rotas </a>
         </li>
         <li class="header__sm-menu-link">
-          <a href="oficinas.php"> Oficinas </a>
+          <a href="oficinas.php"> ODS </a>
         </li>
         <li class="header__sm-menu-link">
         </li>

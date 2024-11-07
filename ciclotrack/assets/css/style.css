@@ -1205,4 +1205,59 @@ form .input-group button:hover{
       color: #fff;
     }
     
-    
+/* Estilos Gerais */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff; /* Fundo branco para toda a página */
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilo dos Tópicos Individuais */
+.topico {
+  background-color: #f4f4f9; /* Fundo leve para cada tópico */
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.topico:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo do Texto */
+.topico p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.topico strong {
+  font-weight: bold;
+  color: #2e8b57; /* Verde para destacar palavras importantes */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+      padding: 10px;
+  }
+
+  .topico p {
+      font-size: 14px;
+  }
+}
+
