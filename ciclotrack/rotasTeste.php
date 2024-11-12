@@ -48,7 +48,7 @@ include "footer.php"
             </p>
           </div>
            <div class="home-hero__cta">
-            <a href="./rotasTeste.php" class="btn btn--bg">Vamos descobrir?</a>
+            <a href="./rotasTeste.php#routePanel" class="btn btn--bg">Vamos descobrir?</a>
           </div>
         </div>
         <!--

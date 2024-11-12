@@ -46,7 +46,7 @@ if (session_status() === PHP_SESSION_NONE) {
       </ul>
       <div class="header__main-ham-menu-cont">
         <img
-          src="./assets/img/svg/ham-menu.svg"
+          src="./assets/svg/ham-menu.svg"
           alt="hamburger menu"
           class="header__main-ham-menu" />
           <img
@@ -78,7 +78,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <a href="#" class="closebtn" id="closeSidebar">&times;</a>
     <a href="login.php">Fazer login</a>
     <a href="cadastro.php">Cadastre-se</a>
-    <a href="logout.php" id="sairBtn">Sair</a>
+    <a href="logout.php" id="sairBtn" class="sairBtn">Sair</a>
   </div>
 </header>
 
