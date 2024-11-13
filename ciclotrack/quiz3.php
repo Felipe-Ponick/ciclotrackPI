@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     h1 {
         color: #4CAF50;
         text-align: center;
-        font-size: 2.5em;
+        font-size: 2.0em;
         margin-bottom: 20px;
     }
 
@@ -99,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 </head>
 <body>
-        <h1>Seção 3 - Avaliação de Mobilidade e Condições Físicas</h1>
+        <h1>Seção 3 - Avaliação de Mobilidade e <br> Condições Físicas</h1>
     <form action="quiz3.php" method="POST">
         <div class="question">
             <label for="joint_pain">Possui algum problema nas articulações que causa dor?</label><br>

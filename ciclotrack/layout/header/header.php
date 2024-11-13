@@ -11,67 +11,39 @@ if (session_status() === PHP_SESSION_NONE) {
     <div class="header__main">
       <ul class="header__links">
         <li class="header__link-wrapper">
-          <a href="index.php" class="header__link"> Inicio </a>
+          <a href="index.php" class="header__link">Inicio</a>
         </li>
-        <?php
-
-        if (isset($_SESSION['logado'])) :
-        ?>
+        <li class="header__link-wrapper">
+          <a href="quiz.php" class="header__link">Quiz</a>
+        </li>
+        <?php if (isset($_SESSION['logado'])): ?>
           <li class="header__link-wrapper">
-            <a href="rotasTeste.php" class="header__link"> Rotas </a>
+            <a href="rotasTeste.php" class="header__link">Rotas</a>
           </li>
           <li class="header__link-wrapper">
-            <a href="oficinas.php" class="header__link"> ODS </a>
+            <a href="oficinas.php" class="header__link">ODS</a>
           </li>
-        <?php 
-        endif;
-        ?>
+        <?php endif; ?>
         <li class="header__link-wrapper">
           <?php
-          // Verifica se o usuário está logado
           if (isset($_SESSION['logado'])) {
-            // Se logado, mostra "Olá, nome"
             echo '<div class="dropdown">';
             echo '<a href="#" class="header__link dropdown-toggle" onclick="toggleDropdown()">Olá, ' . htmlspecialchars($_SESSION['nmUsuario']) . '</a>';
             echo '<div class="dropdown-menu" id="dropdownMenu">';
-            //Mudar o botao
-            echo '<a href="logout.php" class="dropdown-item">Sair</a>';
+            // Botão de logout com confirmação
+            echo '<a href="#" class="dropdown-item" onclick="confirmLogout()">Sair</a>';
             echo '</div></div>';
           } else {
-            // Se não logado, mostra "Minha conta"
-            echo '<a href="../../cadastro.php" id="minhaContaBtn" class="header__link">Minha conta</a>';
+            echo '<a href="./cadastro.php" id="minhaContaBtn" class="header__link">Minha conta</a>';
+            echo '</div></div>';
           }
           ?>
         </li>
       </ul>
       <div class="header__main-ham-menu-cont">
-        <img
-          src="./assets/svg/ham-menu.svg"
-          alt="hamburger menu"
-          class="header__main-ham-menu" />
-          <img
-              src="./assets/svg/ham-menu-close.svg"
-              alt="hamburger menu close"
-              class="header__main-ham-menu-close d-none"
-            />
+        <img src="./assets/svg/ham-menu.svg" alt="hamburger menu" class="header__main-ham-menu" />
+        <img src="./assets/svg/ham-menu-close.svg" alt="hamburger menu close" class="header__main-ham-menu-close d-none" />
       </div>
-    </div>
-  </div>
-  <div class="header__sm-menu">
-    <div class="header__sm-menu-content">
-      <ul class="header__sm-menu-links">
-        <li class="header__sm-menu-link">
-          <a href="index.php"> Inicio </a>
-        </li> 
-        <li class="header__sm-menu-link">
-          <a href="rotasTeste.php"> Rotas </a>
-        </li>
-        <li class="header__sm-menu-link">
-          <a href="oficinas.php"> ODS </a>
-        </li>
-        <li class="header__sm-menu-link">
-        </li>
-      </ul>
     </div>
   </div>
   <div id="sidebar" class="sidebar">
@@ -90,7 +62,14 @@ if (session_status() === PHP_SESSION_NONE) {
     dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
   }
 
-  // Para fechar o menu ao clicar fora
+  function confirmLogout() {
+    const confirmation = confirm("Tem certeza que deseja sair da sua conta?");
+    if (confirmation) {
+      window.location.href = "../ciclotrack/logout.php";
+    }
+  }
+
+  // Fecha o menu ao clicar fora
   window.onclick = function(event) {
     if (!event.target.matches('.dropdown-toggle')) {
       const dropdowns = document.getElementsByClassName("dropdown-menu");
@@ -116,16 +95,22 @@ if (session_status() === PHP_SESSION_NONE) {
     background-color: white;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    border-radius: 5px;
   }
 
   .dropdown-item {
-    padding: 10px 15px;
+    padding: 15px 20px;
     text-decoration: none;
     display: block;
-    color: black;
+    color: white;
+    background-color: green;
+    border-radius: 5px;
+    cursor: pointer;
   }
 
   .dropdown-item:hover {
-    background-color: #f1f1f1;
+    background-color: white;
+    color: green;
+    border: 1px solid green;
   }
 </style>

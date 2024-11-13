@@ -8,7 +8,6 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
 }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -23,6 +22,24 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
 <?php
 include "footer.php"
 ?>
+<style>
+    .route-container {
+    display: flex;
+    gap: 100px;
+}
+
+#routePanel {
+    flex: 2;
+    max-width: 400px;
+    margin-left: 60px;
+}
+
+#map {
+    flex: 2;
+    height: 400px; /* Ajuste conforme necessário */
+}
+
+</style>
 <body>
     <section class="home-hero">
         <div class="home-hero__content">
@@ -58,7 +75,8 @@ include "footer.php"
       </section>
       <br>
       <br>
-    <section>
+      <section>
+    <div class="route-container">
         <div id="routePanel">
             <h2>Planeje sua rota</h2>
             <label for="start">Ponto de Partida:</label>
@@ -69,7 +87,9 @@ include "footer.php"
             <div id="routeInfo"></div>
         </div>
         <div id="map"></div>
-    </section>
+    </div>
+</section>
+
 
     <script>
         // Inicializar o mapa

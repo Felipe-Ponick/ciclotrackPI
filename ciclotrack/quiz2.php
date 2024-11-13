@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     h1 {
         color: #4CAF50;
         text-align: center;
-        font-size: 2.5em;
+        font-size: 2.0em;
         margin-bottom: 20px;
     }
 

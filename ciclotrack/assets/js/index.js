@@ -48,32 +48,38 @@ headerLogoConatiner.addEventListener('click', () => {
  
   /* ABA LATERAL */
   // Selecionar os elementos da aba lateral e o botão "Minha conta"
+// Selecionar os elementos da aba lateral e o botão "Minha conta"
 const minhaContaBtn = document.getElementById('minhaContaBtn');
 const sidebar = document.getElementById('sidebar');
 const closeSidebar = document.getElementById('closeSidebar');
 const sairBtn = document.getElementById('sairBtn');
- 
-// Abrir a aba lateral ao clicar em "Minha conta"
-minhaContaBtn.addEventListener('click', function(event) {
-  event.preventDefault();
-  sidebar.classList.add('open');
-});
- 
-// Fechar a aba lateral ao clicar no botão de fechar
-closeSidebar.addEventListener('click', function() {
-  sidebar.classList.remove('open');
-});
- 
-// Fechar a aba lateral ao clicar fora dela (opcional)
-window.addEventListener('click', function(event) {
-  if (event.target === sidebar) {
+
+if (minhaContaBtn && sidebar && closeSidebar) {
+  // Abrir a aba lateral ao clicar em "Minha conta"
+  minhaContaBtn.addEventListener('click', function(event) {
+    event.preventDefault();
+    sidebar.classList.add('open');
+  });
+
+  // Fechar a aba lateral ao clicar no botão de fechar
+  closeSidebar.addEventListener('click', function() {
     sidebar.classList.remove('open');
-  }
-});
- 
-// Ação de logout (sair)
-sairBtn.addEventListener('click', function(event) {
-  event.preventDefault();
-  // Aqui você pode adicionar a lógica para deslogar o usuário
-  console.log('Usuário deslogado');
-});
+  });
+
+  // Fechar a aba lateral ao clicar fora dela
+  window.addEventListener('click', function(event) {
+    if (event.target !== sidebar && !sidebar.contains(event.target) && event.target !== minhaContaBtn) {
+      sidebar.classList.remove('open');
+    }
+  });
+
+  // Ação de logout (sair)
+  sairBtn.addEventListener('click', function(event) {
+    event.preventDefault();
+    if (confirm("Tem certeza que deseja sair da sua conta?")) {
+      window.location.href = "../ciclotrack/logout.php";
+    }
+  });
+}
+
+
