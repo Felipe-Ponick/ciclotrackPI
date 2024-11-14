@@ -83,7 +83,7 @@ if (session_status() === PHP_SESSION_NONE) {
   }
 </script>
 
-<style>
+ <style> 
   .dropdown {
     position: relative;
     display: inline-block;
@@ -113,4 +113,4 @@ if (session_status() === PHP_SESSION_NONE) {
     color: green;
     border: 1px solid green;
   }
-</style>
+</style> 
