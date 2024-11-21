@@ -5,16 +5,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     header('Location: quiz2.php');  // Caminho relativo
     exit;
 }
+include "layout/header/header.php";
 ?>
 
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste de Avaliação de Saúde - Seção 1</title>
+    <link rel="stylesheet" href="assets/css/style.css">
     <style>
-    body {
+    main {
         font-family: Arial, sans-serif;
         background-color: #f0f8f5;
         display: flex;
@@ -39,14 +40,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     label {
         color: #333;
-        font-size: 1.1em;
+        font-size: 18px;
     }
     .question {
         margin-bottom: 20px;
     }
+    .question input {
+        font-size:16px;
+    }
     input[type="radio"] {
         transform: scale(1.5);
         margin-right: 10px;
+        font-size: 16px;
     }
     input[type="submit"] {
         background-color: #4CAF50;
@@ -55,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         border: none;
         cursor: pointer;
         border-radius: 5px;
-        font-size: 1.2em;
+        font-size: 16px;
         display: block;
         margin: 0 auto;
         width: 100%;
@@ -66,10 +71,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </style>
 
 </head>
-<body>
+<main>
         <h1>Seção 1 - Avaliação Geral de Saúde</h1>
     
-    <form action="quiz.php" method="POST">
+    <form action="quiz.php" class="formularioquiz" method="POST">
         <div class="question">
             <label for="chest_pain">Você sente dor no peito quando realiza algum esforço físico?</label><br>
             <input type="radio" name="chest_pain" value="yes" required> Sim<br>
@@ -96,5 +101,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <input type="submit" value="Próxima Seção">
     </form>
-</body>
+</main>
 </html>
