@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="card-login">
                     <h1 class="titleFormLogin">Login</h1>
                     <div class="textfield">
-                        <input type="email" name="email" placeholder="Usuário" required>
+                        <input type="email" name="email" placeholder="Coloque seu gmail" required>
                     </div>
                     <div class="textfield">
                         <input type="password" name="senha" placeholder="Senha" required> <!-- 'senha' no input -->

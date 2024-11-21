@@ -22,21 +22,54 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
             align-items: center;
             justify-content: center;
             text-align: center;
-            min-height: 70vh;
-
+            min-height: 100vh;
+            background: linear-gradient(to right,rgb(178, 228, 161), rgb(109, 197, 118), rgb(178, 228, 161)), url(../../assets/svg/common-bg.svg);
         }
 
+        /* Animação de fade-in para o título */
         .display-ods h1 {
             font-size: 4em;
             margin-bottom: 0.5em;
-            color: #236910;
+            color: #fff;
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: fadeInUp 1.5s ease-out forwards;
         }
 
+        /* Animação de fade-in para o parágrafo */
         .display-ods p {
             font-size: 2em;
             max-width: 600px; /* Limita a largura do parágrafo para melhor leitura */
             margin-top: 0;
-            color: #236910;
+            color: #fff;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 2s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        /* Definindo a animação de fade-in e movimento */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Estilo original do botão */
+        .home-hero__cta .btn {
+            padding: 20px 30px;
+            font-size: 1.8em;
+            color: black;
+            background-color: #fff; /* Cor para o botão */
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        /* Sem efeito de hover adicional */
+        .home-hero__cta .btn:hover {
+            background-color: green;
+            color: #fff; /* Cor de hover sem animação de escala */
         }
     </style>
 </head> 
@@ -46,9 +79,12 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
 <div class="display-ods"> 
     <h1>Objetivos de Desenvolvimento Sustentável (ODS)</h1>
     <p>Os Objetivos de Desenvolvimento Sustentável (ODS) são 17 objetivos ambiciosos e interligados e 169 metas de ação global, para alcançar até o ano de 2030, que tratam dos principais desafios de desenvolvimento enfrentados pelas pessoas, no Brasil e no mundo.</p>
+    <div class="home-hero__cta">
+            <a href="./oficinas.php#beneficios fundo-branco" class="btn btn--bg">Venha conhecer</a>
+    </div>
 </div>
-
-<section class="beneficios fundo-branco">
+<br><br><br><br><br><br><br><br>
+<section id="beneficios fundo-branco">
     <div class="container">
         <div class="topico">
             <p><strong>Redução da emissão de gases poluentes:</strong> A bicicleta não emite gases do efeito estufa, contribuindo diretamente para a melhoria da qualidade do ar e a mitigação das mudanças climáticas.</p>

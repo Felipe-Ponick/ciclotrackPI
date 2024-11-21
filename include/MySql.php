@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root"; 
 $password = ""; // Defina a senha do seu banco de dados, se existir
-$dbname = "ciclotrack";
+$dbname = "zaily";
  
 // Criando a conexão
 $conn = new mysqli($servername, $username, $password, $dbname);
